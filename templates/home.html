@@ -14,7 +14,8 @@
         {% endfor %}
     </ul>
     <h4> Enter a new message</h4>
-    <form action="/">
+    <form action="/"  enctype=multipart/form-data>
+        <input type="file" name="file1" value="Upload"><br>
         <label >Your message:</label><br>
         <input type="text" name="msg"><br>
         <input type="submit" value="Submit">
