@@ -10,12 +10,13 @@
         {% for m in messages[-9:]|reverse %}
             <li>
                 "{{m.content}}" <small>Posted on {{m.timestamp}}</small>
+                <img src="{{m.image_path}}"/>
             </li>
         {% endfor %}
     </ul>
     <h4> Enter a new message</h4>
-    <form action="/"  enctype=multipart/form-data>
-        <input type="file" name="file1" value="Upload"><br>
+    <form action="/" enctype=multipart/form-data method = "POST">
+        <input type="file" name="image" value="Upload"><br>
         <label >Your message:</label><br>
         <input type="text" name="msg"><br>
         <input type="submit" value="Submit">
